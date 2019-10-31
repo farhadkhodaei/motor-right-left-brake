@@ -163,6 +163,12 @@ while (1)
                  LEFT_CNT=0;
                  continue;
               }
+              if(!STOP_BTN){
+                 STOP_CNT = 0;
+              }
+              if(STOP_BTN){
+                 STOP_CNT = 1;
+              }
               break;
            case LEFT_STATE:
               if(!STOP_BTN){
@@ -172,7 +178,6 @@ while (1)
                  STOP_CNT = 0;
                  delay_ms(1000);
                  state = STOP_STATE;
-                 STOP_CNT = 1;
                  continue;
               }
               break;
@@ -184,7 +189,6 @@ while (1)
                  STOP_CNT = 0;
                  delay_ms(1000);
                  state = STOP_STATE;
-                 STOP_CNT = 1;
                  continue;
               }
               break;
