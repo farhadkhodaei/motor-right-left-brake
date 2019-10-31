@@ -166,27 +166,28 @@ while (1)
               break;
            case LEFT_STATE:
               if(!STOP_BTN){
+                 RIGHT_CNT=1;
+                 LEFT_CNT=1;
+                 delay_ms(100);
                  STOP_CNT = 0;
                  delay_ms(1000);
                  state = STOP_STATE;
-                 RIGHT_CNT=1;
-                 LEFT_CNT=1;
                  STOP_CNT = 1;
                  continue;
               }
               break;
            case RIGHT_STATE:
               if(!STOP_BTN){
+                 RIGHT_CNT=1;
+                 LEFT_CNT=1;
+                 delay_ms(100);
                  STOP_CNT = 0;
                  delay_ms(1000);
                  state = STOP_STATE;
-                 RIGHT_CNT=1;
-                 LEFT_CNT=1;
                  STOP_CNT = 1;
                  continue;
               }
               break;
           }
-        
       }
 }
